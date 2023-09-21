@@ -1,6 +1,6 @@
 # Tech Trek for All
 
-Welcome to Tech Trek for All! Through this web application, we aim to empower individuals in their pursuit of success in the tech industry. We are committed to promoting diversity and inclusivity by connecting underrepresented individuals with mentors, job opportunities, and resources, particularly in the field of computer science. People are also encouraged to sign up as mentors to further this mission.
+Welcome to Tech Trek for All! Through this web application, we aim to empower individuals in their pursuit of success in the tech industry. We are committed to promoting diversity and inclusivity by connecting underrepresented individuals with mentors, job opportunities, and resources, particularly in the field of computer science. We also encourage people to sign up as mentors to further this mission.
 
 **Key Objectives:**
 
