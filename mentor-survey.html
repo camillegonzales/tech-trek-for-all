@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tech Trek for All</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>Mentor Sign-Up Survey</h1>
+    <form action="#" method="post"> <!-- Replace "#" with the actual form submission URL -->
+
+        <!-- Section 1: Personal Information -->
+        <section>
+            <h2>Personal Information</h2>
+
+            <label for="preferredName">Preferred Full Name:</label>
+            <input type="text" id="preferredName" name="preferredName">
+            
+            <label for="pronouns">Pronouns:</label>
+            <select id="pronouns" name="pronouns">
+                <option value="she">She/Her</option>
+                <option value="he">He/Him</option>
+                <option value="they">They/Them</option>
+                <option value="notToSay">Prefer not to say</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="text" id="otherPronouns" name="otherPronouns" placeholder="Specify other">
+            
+            <label for="gender">Gender (Optional):</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="nonBinary">Non-binary</option>
+                <option value="notToSay">Prefer not to say</option>
+                <option value="other">Other (please specify)</option>
+            </select>
+            <input type="text" id="otherGender" name="otherGender" placeholder="Specify other">
+            
+            <label for="age">Age (Optional):</label>
+            <input type="text" id="age" name="age">
+        </section>
+
+        <!-- Section 2: Contact Information -->
+        <section>
+            <h2>Contact Information</h2>
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label>Preferred Contact Method:</label>
+            <div>
+                <input type="radio" id="contactEmail" name="contactMethod" value="email">
+                <label for="contactEmail">Email</label>
+            </div>
+            <div>
+                <input type="radio" id="contactPhone" name="contactMethod" value="phone">
+                <label for="contactPhone">Phone</label>
+            </div>
+            <div>
+                <input type="radio" id="contactOther" name="contactMethod" value="other">
+                <label for="contactOther">Other (please specify)</label>
+                <input type="text" id="contactOtherText" name="contactMethodOther" placeholder="Specify other">
+            </div>
+        </section>
+
+        <!-- Section 3: Background and Experience -->
+        <section>
+            <h2>Section 3: Background and Experience</h2>
+            
+            <label for="currentJobTitle">Current Job Title:</label>
+            <input type="text" id="currentJobTitle" name="currentJobTitle">
+            
+            <label for="currentCompany">Current Company/Organization:</label>
+            <input type="text" id="currentCompany" name="currentCompany">
+            
+            <label for="yearsOfExperience">Years of Experience in Computer Science:</label>
+            <input type="text" id="yearsOfExperience" name="yearsOfExperience">
+            
+            <label for="currentRole">Describe your current role and responsibilities:</label>
+            <textarea id="currentRole" name="currentRole" rows="6"></textarea>
+            
+            <label for="areasOfExpertise">What are your areas of expertise or specialization?</label>
+            <input type="text" id="areasOfExpertise" name="areasOfExpertise">
+        </section>
+
+        <!-- Section 4: Computer Science Skills -->
+        <section>
+            <h2>Computer Science Skills</h2>
+            
+            <label for="skillLevel">Which of the following best describes your current computer science skill level?</label>
+            <select id="skillLevel" name="skillLevel">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+            
+            <label>Select the computer science skills you possess (check all that apply):</label>
+            <div>
+                <input type="checkbox" id="algorithmDesign" name="skills[]" value="algorithmDesign">
+                <label for="algorithmDesign">Algorithm Design</label>
+            </div>
+            <div>
+                <input type="checkbox" id="dataStructures" name="skills[]" value="dataStructures">
+                <label for="dataStructures">Data Structures</label>
+            </div>
+            <div>
+                <input type="checkbox" id="webDevelopment" name="skills[]" value="webDevelopment">
+                <label for="webDevelopment">Web Development</label>
+            </div>
+            <div>
+                <input type="checkbox" id="mobileAppDevelopment" name="skills[]" value="mobileAppDevelopment">
+                <label for="mobileAppDevelopment">Mobile App Development</label>
+            </div>
+            <div>
+                <input type="checkbox" id="databaseManagement" name="skills[]" value="databaseManagement">
+                <label for="databaseManagement">Database Management</label>
+            </div>
+            <div>
+                <input type="checkbox" id="machineLearning" name="skills[]" value="machineLearning">
+                <label for="machineLearning">Machine Learning</label>
+            </div>
+            <div>
+                <input type="checkbox" id="cybersecurity" name="skills[]" value="cybersecurity">
+                <label for="cybersecurity">Cybersecurity</label>
+            </div>
+            <div>
+                <input type="checkbox" id="networkAdministration" name="skills[]" value="networkAdministration">
+                <label for="networkAdministration">Network Administration</label>
+            </div>
+            <div>
+                <input type="checkbox" id="cloudComputing" name="skills[]" value="cloudComputing">
+                <label for="cloudComputing">Cloud Computing</label>
+            </div>
+            <div>
+                <input type="checkbox" id="devOps" name="skills[]" value="devOps">
+                <label for="devOps">DevOps</label>
+            </div>
+            <div>
+                <input type="checkbox" id="fullStackDevelopment" name="skills[]" value="fullStackDevelopment">
+                <label for="fullStackDevelopment">Full-Stack Development</label>
+            </div>
+            <div>
+                <input type="checkbox" id="frontEndDevelopment" name="skills[]" value="frontEndDevelopment">
+                <label for="frontEndDevelopment">Front-End Development</label>
+            </div>
+            <div>
+                <input type="checkbox" id="backEndDevelopment" name="skills[]" value="backEndDevelopment">
+                <label for="backEndDevelopment">Back-End Development</label>
+            </div>
+            <div>
+                <input type="checkbox" id="gameDevelopment" name="skills[]" value="gameDevelopment">
+                <label for="gameDevelopment">Game Development</label>
+            </div>
+            <div>
+                <input type="checkbox" id="uxDesign" name="skills[]" value="uxDesign">
+                <label for="uxDesign">User Experience (UX) Design</label>
+            </div>
+            <div>
+                <input type="checkbox" id="uiDesign" name="skills[]" value="uiDesign">
+                <label for="uiDesign">User Interface (UI) Design</label>
+            </div>
+            <div>
+                <input type="checkbox" id="otherSkills" name="skills[]" value="otherSkills">
+                <label for="otherSkills">Other (please specify)</label>
+                <input type="text" id="otherSkillsText" name="otherSkillsText" placeholder="Specify other skills">
+            </div>
+            
+            <label for="programmingLanguages">List any programming languages you are proficient in:</label>
+            <input type="text" id="programmingLanguages" name="programmingLanguages" placeholder="Python, Java, etc.">
+        </section>
+
+        <!-- Section 5: Mentorship Preferences -->
+        <section>
+            <h2>What type of mentorship are you interested in providing? (check all that apply)</h2>
+            
+            <div>
+                <input type="checkbox" id="mentorCareerGuidance" name="mentorshipPreferences[]" value="mentorCareerGuidance">
+                <label for="mentorCareerGuidance">Career Guidance</label>
+            </div>
+            <div>
+                <input type="checkbox" id="mentorSkillDevelopment" name="mentorshipPreferences[]" value="mentorSkillDevelopment">
+                <label for="mentorSkillDevelopment">Skill Development</label>
+            </div>
+            <div>
+                <input type="checkbox" id="mentorProjectCollaboration" name="mentorshipPreferences[]" value="mentorProjectCollaboration">
+                <label for="mentorProjectCollaboration">Project Collaboration</label>
+            </div>
+            <div>
+                <input type="checkbox" id="mentorIndustryInsights" name="mentorshipPreferences[]" value="mentorIndustryInsights">
+                <label for="mentorIndustryInsights">Industry Insights</label>
+            </div>
+            <div>
+                <input type="checkbox" id="mentorDiversityInclusionSupport" name="mentorshipPreferences[]" value="mentorDiversityInclusionSupport">
+                <label for="mentorDiversityInclusionSupport">Diversity and Inclusion Support</label>
+            </div>
+            <div>
+                <input type="checkbox" id="mentorOtherMentorship" name="mentorshipPreferences[]" value="mentorOtherMentorship">
+                <label for="mentorOtherMentorship">Other (please specify)</label>
+                <input type="text" id="mentorOtherMentorshipText" name="mentorOtherMentorshipText" placeholder="Specify other mentorship preferences">
+            </div>
+            
+            <h2>Are you interested in mentoring individuals from diverse backgrounds or with specific needs? (Optional)</h2>
+            <label for="mentorDiverseBackgrounds">If yes, please provide details:</label>
+            <textarea id="mentorDiverseBackgrounds" name="mentorDiverseBackgrounds" rows="4"></textarea>
+        </section>
+
+        <!-- Section 6: Interests and Additional Information -->
+        <section>
+            <h2>Interests and Additional Information</h2>
+            
+            <label for="additionalInformation">Tell us more about your interests, hobbies, or any other information you'd like to share:</label>
+            <textarea id="additionalInformation" name="additionalInformation" rows="6"></textarea>
+        </section>
+
+        <!-- Section 7: Inclusivity and Diversity -->
+        <section>
+            <h2>How do you believe you can contribute to a more inclusive and diverse tech community?</h2>
+            
+            <label for="contributionToInclusivity">Please describe your contributions:</label>
+            <textarea id="contributionToInclusivity" name="contributionToInclusivity" rows="6"></textarea>
+        </section>
+
+        <!-- Section 8: Feedback and Suggestions -->
+        <section>
+            <h2>Feedback and Suggestions</h2>
+            
+            <label for="feedbackSuggestions">Do you have any suggestions or feedback on how we can make our platform more inclusive and accommodating to your needs as a mentor?</label>
+            <textarea id="feedbackSuggestions" name="feedbackSuggestions" rows="6"></textarea>
+        </section>
+
+        <!-- Section 9: Agreement and Consent -->
+        <section>
+            <h2>Agreement and Consent</h2>
+            
+            <label>
+                <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                I consent to the terms and conditions of the platform and understand that my information will be used to match me with mentees and contribute to a more inclusive tech community.
+            </label>
+        </section>
+
+        <!-- Section 10: Sign-Up -->
+        <section>
+            <h2>Sign-Up</h2>
+            
+            <label for="password">Create a Password:</label>
+            <input type="password" id="password" name="password" required>
+        </section>
+
+        <!-- Section 11: Submit -->
+        <section>
+            <input type="submit" value="Sign Up">
+        </section>
+    </form>
+</body>
+</html>
