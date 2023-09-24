@@ -9,6 +9,17 @@
     <script src='main.js'></script>
 </head>
 <body>
+    <nav id="site-nav">
+        <div class="logo">Tech Trek for All</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mentorship.html">Mentorship</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </div>
+    </nav>
     <h1>Mentor Sign-Up Survey</h1>
     <form action="#" method="post"> <!-- Replace "#" with the actual form submission URL -->
 
@@ -68,7 +79,7 @@
 
         <!-- Section 3: Background and Experience -->
         <section>
-            <h2>Section 3: Background and Experience</h2>
+            <h2>Background and Experience</h2>
             
             <label for="currentJobTitle">Current Job Title:</label>
             <input type="text" id="currentJobTitle" name="currentJobTitle">
@@ -174,8 +185,9 @@
 
         <!-- Section 5: Mentorship Preferences -->
         <section>
-            <h2>What type of mentorship are you interested in providing? (check all that apply)</h2>
-            
+            <h2>Mentorship Preferences</h2>
+
+            <label>What type of mentorship are you interested in providing? (check all that apply)</label>
             <div>
                 <input type="checkbox" id="mentorCareerGuidance" name="mentorshipPreferences[]" value="mentorCareerGuidance">
                 <label for="mentorCareerGuidance">Career Guidance</label>
@@ -202,7 +214,7 @@
                 <input type="text" id="mentorOtherMentorshipText" name="mentorOtherMentorshipText" placeholder="Specify other mentorship preferences">
             </div>
             
-            <h2>Are you interested in mentoring individuals from diverse backgrounds or with specific needs? (Optional)</h2>
+            <label>Are you interested in mentoring individuals from diverse backgrounds or with specific needs? (Optional)</label>
             <label for="mentorDiverseBackgrounds">If yes, please provide details:</label>
             <textarea id="mentorDiverseBackgrounds" name="mentorDiverseBackgrounds" rows="4"></textarea>
         </section>
@@ -217,8 +229,9 @@
 
         <!-- Section 7: Inclusivity and Diversity -->
         <section>
-            <h2>How do you believe you can contribute to a more inclusive and diverse tech community?</h2>
+            <h2>Inclusivity and Diversity</h2>
             
+            <label>How do you believe you can contribute to a more inclusive and diverse tech community?</label>
             <label for="contributionToInclusivity">Please describe your contributions:</label>
             <textarea id="contributionToInclusivity" name="contributionToInclusivity" rows="6"></textarea>
         </section>
