@@ -16,9 +16,13 @@
         <section>
             <h2>Personal Information</h2>
 
-            <label for="preferredName">Preferred Full Name:</label>
-            <input type="text" id="preferredName" name="preferredName">
-            
+            <div class="inputArea">
+                <input type="text" required="required">
+                <span>Preferred Full Name</span>
+                <i></i>
+            </div>
+        </section>
+        <section>
             <label for="pronouns">Pronouns:</label>
             <select id="pronouns" name="pronouns">
                 <option value="she">She/Her</option>
@@ -27,8 +31,8 @@
                 <option value="notToSay">Prefer not to say</option>
                 <option value="other">Other</option>
             </select>
-            <input type="text" id="otherPronouns" name="otherPronouns" placeholder="Specify other">
-            
+        </section>
+        <section>
             <label for="gender">Gender (Optional):</label>
             <select id="gender" name="gender">
                 <option value="male">Male</option>
@@ -37,19 +41,23 @@
                 <option value="notToSay">Prefer not to say</option>
                 <option value="other">Other (please specify)</option>
             </select>
-            <input type="text" id="otherGender" name="otherGender" placeholder="Specify other">
-            
-            <label for="age">Age (Optional):</label>
-            <input type="text" id="age" name="age">
+        </section>
+        <section>
+            <div class="inputArea">
+                <input type="number" id="age" name="age" required="required">
+                <span>Age</span>
+                <i></i>
+            </div>
         </section>
 
         <!-- Section 2: Contact Information -->
         <section>
             <h2>Contact Information</h2>
-            
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required>
-    
+            <div class="inputArea">
+                <input type="email" id="email" name="email" required="required">
+                <span>Email Address</span>
+                <i></i>
+            </div>
             <label>Preferred Contact Method:</label>
             <div>
                 <input type="radio" id="contactEmail" name="contactMethod" value="email">
@@ -69,9 +77,11 @@
         <!-- Section 3: Background and Interests -->
         <section>
             <h2>Background and Interests</h2>
-            
-            <label for="currentLocation">Current Location:</label>
-            <input type="text" id="currentLocation" name="currentLocation">
+            <div class="inputArea">
+            <input type="text" id="currentLocation" name="currentLocation" required="required">
+            <span>Current Location</span>
+            <i></i>
+            </div>
             
             <label for="ethnicity">Ethnicity (Optional):</label>
             <select id="ethnicity" name="ethnicity">
