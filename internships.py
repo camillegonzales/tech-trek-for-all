@@ -12,20 +12,23 @@ def get_internships():
     data = BeautifulSoup(page.content, "html.parser")
     table = data.find('table')
     body = table.find('tbody')
-    internships = {}
+    internships = []
     for row in body.findAll('tr'):
-        internships['company'] = row.td.text
-        internships['date'] = row.findAll('td')[4].text
+        internship = {}
+        internship['company'] = row.td.text
+        internship['date'] = row.findAll('td')[4].text
         if row.a:
-            internships['link'] = row.a.get('href')
-            internships['title'] = row.a.text
+            internship['link'] = row.a.get('href')
+            internship['title'] = row.a.text
+        internships.append(internship)
     return internships
 
 
+internships = get_internships()
 client = MongoClient()
 # Create database
 db = client.tech_collection
 # Switch to collection
-internships = db.internships
+db = db.internships
 # Insert all internships into the collection
-internships.insert_many(get_internships)
+db.insert_many(internships)
