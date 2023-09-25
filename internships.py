@@ -29,6 +29,6 @@ client = MongoClient()
 # Create database
 db = client.tech_collection
 # Switch to collection
-db = db.internships
+collection = db.internships
 # Insert all internships into the collection
 db.insert_many(internships)
