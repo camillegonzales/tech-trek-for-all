@@ -2,6 +2,10 @@ from flask import Flask, redirect, url_for, request
 
 app = Flask(__name__)
 
+@app.route('/success/<name>')
+def success(name):
+    return 'Submission successful!'
+
 @app.route('/submit', methods=['POST', 'GET'])
 def submit():
     if request.method == 'POST':
