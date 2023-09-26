@@ -1,0 +1,130 @@
+/* ========== IMPORTS ========== */
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300;400;500;600;700&display=swap');
+
+/* ========== GENERAL ========== */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    color: black;
+}
+
+body{
+    font-family: 'Martian Mono', monospace;
+    display: auto;
+}
+
+/* ========== NAVIGATION ========== */
+nav, .nav-links{
+    display: flex;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+}
+
+.nav-links {
+    gap: 3rem;
+    list-style: none;
+    font-size: 1.25rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: navy;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: navy;
+  }
+
+.logo {
+    font-size: 1.25rem;
+}
+
+/* ========== SECTIONS ========== */
+
+section {
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+  
+.section-text {
+    display: flex;
+}
+
+/* ========== HOME SECTION ========== */
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.home-body {
+    background-image: url(2-inclusive-background.jpg);
+    margin: 0;
+    padding: 0;
+    background-size: 100% 100vh; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.home-content {
+    text-align: center;
+    max-width: 840px;
+    font-size: 20px;
+}
+
+.homepage-title {
+    color: #6e906d;
+    font-size: 36px;
+}
+
+.about, .p-signup {
+    font-size: 17px;
+}
+
+.about {
+    color: rgba(0, 0, 0, 0.7);
+    margin-top: 15px;
+    max-width: 800px;
+}
+
+.button-container {
+    margin: 15px;
+    text-align: center;
+}
+
+.sign-up-button {
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(110, 144, 109, 0.5);
+    padding: 5px;
+    font-size: 20px;
+}
+
+.sign-up-button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* ========== SIGNUP SECTION ========== */
+.info {
+    font-size: 15px;
+    text-align: left;
+    max-width: 600px;
+}
+
+.signup-heading {
+    margin-bottom: 30px;
+}
