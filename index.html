@@ -16,10 +16,26 @@
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="signup.html">Sign Up</a></li>
-                    <li><a href="login.html">Login</a></li>
+                    <li><a onclick="document.getElementById('modal-login').style.display='block'">Login</a></li>
                 </ul>
             </div>
         </nav>
+            <div id="modal-login" class="modal">
+                <form class="modal-content" action="#" method="post"> <!-- Replace "#" with the actual form submission URL -->
+                    <div>
+                        <label for="login-email"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="login-email" required>
+              
+                        <label for="login-password"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="login-password" required>
+                        
+                        <button type="submit">Login</button>
+                    </div>
+                    <div class="container">
+                        <button type="button" onclick="document.getElementById('modal-login').style.display='none'" class="cancelbtn">Cancel</button>
+                    </div>
+                </form>
+            </div>
     </header>
     
     <section class="home">
@@ -31,11 +47,7 @@
                     </strong>
                 </div>
             <br>
-            <p class="p-signup">Sign up today!</p>
-            <div class="button-container">
-                <a class="sign-up-button" href="mentee-survey.html" role="button">Mentee</a>
-                <a class="sign-up-button" href="mentor-survey.html" role="button">Mentor</a>
-            </div>
+            <a href="signup.html" class="sign-up-button">Sign up today!</a>
         </div>
     </section>
 </body>
