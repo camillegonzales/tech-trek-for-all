@@ -31,9 +31,10 @@
                 dataTable.empty();
                 data.forEach(function (item) {
                     var row = '<tr>';
-                    row += '<td>' + item.field1 + '</td>'; // Replace 'field1' with your actual field names
-                    row += '<td>' + item.field2 + '</td>'; // Replace 'field2' with your actual field names
-                    // Add more cells for each field in your data
+                    row += '<td>' + item.field1 + '</td>'; // Replace 'field1' with actual field name
+                    row += '<td>' + item.field2 + '</td>';
+                    row += '<td>' + item.field3 + '</td>';
+                    row += '<td>' + item.field4 + '</td>';
                     row += '</tr>';
                     dataTable.append(row);
                 });
