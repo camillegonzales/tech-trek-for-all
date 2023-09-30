@@ -1,10 +1,28 @@
-from flask import Flask, redirect, url_for, request
+from flask import Flask, render_template, request, redirect, url_for
+from pymongo import MongoClient
 
 app = Flask(__name__)
+
+# MongoDB connection
+# client = MongoClient("mongodb://username:password@cluster.mongodb.net/database")
+# db = client.mydatabase
+# collection = db.survey_data
+
+@app.route("/")
+@app.route("/home")
+def index():
+    return render_template("index.html")
+
+
+@app.route("/signup")
+def signup():
+    return render_template("signup.html")
+
 
 @app.route('/success/<name>')
 def success(name):
     return 'Submission successful!'
+
 
 @app.route('/submit', methods=['POST', 'GET'])
 def submit():
