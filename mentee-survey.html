@@ -5,36 +5,10 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Tech Trek for All</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='survey.css'>
     <script src='main.js'></script>
 </head>
-<body class="home-body">
-    <header>
-        <nav id="site-nav">
-            <div class="logo">Tech Trek for All</div>
-            <div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="signup.html">Sign Up</a></li>
-                    <li><a onclick="document.getElementById('modal-login').style.display='block'">Login</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div id="modal-login" class="modal">
-            <form class="modal-content" action="#" method="post"> <!-- Replace "#" with the actual form submission URL -->
-                <div>
-                    <label for="login-email"><b>Email</b></label>
-                    <input type="text" placeholder="Enter Email" name="login-email" required>
-            
-                    <label for="login-password"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="login-password" required>
-                    
-                    <button type="submit">Login</button>
-                    <button type="button" onclick="document.getElementById('modal-login').style.display='none'" class="cancelbtn">Cancel</button>
-                </div>
-            </form>
-        </div>
-    </header>
+<body>
     <h1>Mentee Sign-Up Survey</h1>
     <form action="#" method="post"> <!-- Replace "#" with the actual form submission URL -->
 
@@ -42,50 +16,63 @@
         <section>
             <h2>Personal Information</h2>
 
-            <label for="preferredName">Preferred Full Name:</label>
-            <input type="text" id="preferredName" name="preferredName">
-            
-            <label for="pronouns">Pronouns:</label>
-            <select id="pronouns" name="pronouns">
-                <option value="she">She/Her</option>
-                <option value="he">He/Him</option>
-                <option value="they">They/Them</option>
-                <option value="notToSay">Prefer not to say</option>
-                <option value="other">Other</option>
-            </select>
-            <input type="text" id="otherPronouns" name="otherPronouns" placeholder="Specify other">
-            
-            <label for="gender">Gender (Optional):</label>
-            <select id="gender" name="gender">
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="nonBinary">Non-binary</option>
-                <option value="notToSay">Prefer not to say</option>
-                <option value="other">Other (please specify)</option>
-            </select>
-            <input type="text" id="otherGender" name="otherGender" placeholder="Specify other">
-            
-            <label for="age">Age (Optional):</label>
-            <input type="text" id="age" name="age">
+            <div class="inputArea">
+                <input type="text" required="required">
+                <span>Preferred Full Name</span>
+                <i></i>
+            </div>
+        </section>
+        <section>
+            <div class="dropdown question">
+                <label for="pronouns">Pronouns:</label>
+                <select id="pronouns" name="pronouns">
+                    <option value="she">She/Her</option>
+                    <option value="he">He/Him</option>
+                    <option value="they">They/Them</option>
+                    <option value="notToSay">Prefer not to say</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+        </section>
+        <section>
+            <div class="dropdown question">
+                <label for="gender">Gender (Optional):</label>
+                <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="nonBinary">Non-binary</option>
+                    <option value="notToSay">Prefer not to say</option>
+                    <option value="other">Other (please specify)</option>
+                </select>
+            </div>
+        </section>
+        <section>
+            <div class="inputArea">
+                <input type="number" id="age" name="age" required="required">
+                <span>Age</span>
+                <i></i>
+            </div>
         </section>
 
         <!-- Section 2: Contact Information -->
         <section>
             <h2>Contact Information</h2>
-            
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required>
-    
-            <label>Preferred Contact Method:</label>
-            <div>
+            <div class="inputArea">
+                <input type="email" id="email" name="email" required="required">
+                <span>Email Address</span>
+                <i></i>
+            </div>
+
+            <label class="topLabel question">Preferred Contact Method:</label>
+            <div class="circle">
                 <input type="radio" id="contactEmail" name="contactMethod" value="email">
                 <label for="contactEmail">Email</label>
             </div>
-            <div>
+            <div class="circle">
                 <input type="radio" id="contactPhone" name="contactMethod" value="phone">
                 <label for="contactPhone">Phone</label>
             </div>
-            <div>
+            <div class="circle">
                 <input type="radio" id="contactOther" name="contactMethod" value="other">
                 <label for="contactOther">Other (please specify)</label>
                 <input type="text" id="contactOtherText" name="contactMethodOther" placeholder="Specify other">
@@ -95,23 +82,26 @@
         <!-- Section 3: Background and Interests -->
         <section>
             <h2>Background and Interests</h2>
+            <div class="inputArea">
+            <input type="text" id="currentLocation" name="currentLocation" required="required">
+            <span>Current Location</span>
+            <i></i>
+            </div>
             
-            <label for="currentLocation">Current Location:</label>
-            <input type="text" id="currentLocation" name="currentLocation">
-            
-            <label for="ethnicity">Ethnicity (Optional):</label>
-            <select id="ethnicity" name="ethnicity">
-                <option value="africanAmerican">African American</option>
-                <option value="asianPacificIslander">Asian/Pacific Islander</option>
-                <option value="hispanicLatino">Hispanic/Latino</option>
-                <option value="nativeAmerican">Native American</option>
-                <option value="white">White</option>
-                <option value="multiracial">Multiracial</option>
-                <option value="other">Other (please specify)</option>
-                <option value="notToSay">Prefer not to say</option>
-            </select>
-            
-            <label for="accessibilityNeeds">Do you have any accessibility needs or specific accommodations you'd like us to be aware of? (Optional)</label>
+            <div class="topLabel question">
+                <label  for="ethnicity">Ethnicity (Optional):</label>
+                <select id="ethnicity" name="ethnicity">
+                    <option value="africanAmerican">African American</option>
+                    <option value="asianPacificIslander">Asian/Pacific Islander</option>
+                    <option value="hispanicLatino">Hispanic/Latino</option>
+                    <option value="nativeAmerican">Native American</option>
+                    <option value="white">White</option>
+                    <option value="multiracial">Multiracial</option>
+                    <option value="other">Other (please specify)</option>
+                    <option value="notToSay">Prefer not to say</option>
+                </select>
+            </div>
+            <label  class="accessibility question" for="accessibilityNeeds">Do you have any accessibility needs or specific accommodations you'd like us to be aware of? (Optional)</label>
             <textarea id="accessibilityNeeds" name="accessibilityNeeds" rows="4"></textarea>
         </section>
 
@@ -119,170 +109,170 @@
         <section>
             <h2>Computer Science Skills</h2>
             
-            <label for="skillLevel">Which of the following best describes your current computer science skill level?</label>
-            <select id="skillLevel" name="skillLevel">
+            <label class="skillLevel question" for="skillLevel">Which of the following best describes your current computer science skill level?</label>
+            <select class="skillLevel" id="skillLevel" name="skillLevel">
                 <option value="beginner">Beginner</option>
                 <option value="intermediate">Intermediate</option>
                 <option value="advanced">Advanced</option>
             </select>
             
-            <label>Select the computer science skills you possess (check all that apply):</label>
-            <div>
+            <label class="question">Select the computer science skills you possess (check all that apply):</label>
+            <div class="CSSkills">
                 <input type="checkbox" id="algorithmDesign" name="skills[]" value="algorithmDesign">
                 <label for="algorithmDesign">Algorithm Design</label>
             </div>
-            <div>
+            <div class="CSSkills">
                 <input type="checkbox" id="dataStructures" name="skills[]" value="dataStructures">
                 <label for="dataStructures">Data Structures</label>
             </div>
-            <div>
+            <div class="CSSkills">
                 <input type="checkbox" id="webDevelopment" name="skills[]" value="webDevelopment">
                 <label for="webDevelopment">Web Development</label>
             </div>
-            <div>
+            <div class="CSSkills">
                 <input type="checkbox" id="mobileAppDevelopment" name="skills[]" value="mobileAppDevelopment">
                 <label for="mobileAppDevelopment">Mobile App Development</label>
             </div>
-            <div>
+            <div class="CSSkills">
                 <input type="checkbox" id="databaseManagement" name="skills[]" value="databaseManagement">
                 <label for="databaseManagement">Database Management</label>
             </div>
-            <div>
+            <div class="CSSkills">
                 <input type="checkbox" id="machineLearning" name="skills[]" value="machineLearning">
                 <label for="machineLearning">Machine Learning</label>
             </div>
-            <div>
+            <div class="CSSkills">
                 <input type="checkbox" id="cybersecurity" name="skills[]" value="cybersecurity">
                 <label for="cybersecurity">Cybersecurity</label>
             </div>
-            <div>
+            <div class="CSSkills">
                 <input type="checkbox" id="networkAdministration" name="skills[]" value="networkAdministration">
                 <label for="networkAdministration">Network Administration</label>
             </div>
-            <div>
+            <div class="CSSkills">
                 <input type="checkbox" id="cloudComputing" name="skills[]" value="cloudComputing">
                 <label for="cloudComputing">Cloud Computing</label>
             </div>
-            <div>
+            <div class="CSSkills">
                 <input type="checkbox" id="devOps" name="skills[]" value="devOps">
                 <label for="devOps">DevOps</label>
             </div>
-            <div>
+            <div class="CSSkills">
                 <input type="checkbox" id="fullStackDevelopment" name="skills[]" value="fullStackDevelopment">
                 <label for="fullStackDevelopment">Full-Stack Development</label>
             </div>
-            <div>
+            <div class="CSSkills">
                 <input type="checkbox" id="frontEndDevelopment" name="skills[]" value="frontEndDevelopment">
                 <label for="frontEndDevelopment">Front-End Development</label>
             </div>
-            <div>
+            <div class="CSSkills">
                 <input type="checkbox" id="backEndDevelopment" name="skills[]" value="backEndDevelopment">
                 <label for="backEndDevelopment">Back-End Development</label>
             </div>
-            <div>
+            <div class="CSSkills">
                 <input type="checkbox" id="gameDevelopment" name="skills[]" value="gameDevelopment">
                 <label for="gameDevelopment">Game Development</label>
             </div>
-            <div>
+            <div class="CSSkills">
                 <input type="checkbox" id="uxDesign" name="skills[]" value="uxDesign">
                 <label for="uxDesign">User Experience (UX) Design</label>
             </div>
-            <div>
+            <div class="CSSkills">
                 <input type="checkbox" id="uiDesign" name="skills[]" value="uiDesign">
                 <label for="uiDesign">User Interface (UI) Design</label>
             </div>
-            <div>
+            <div class="CSSkills">
                 <input type="checkbox" id="otherSkills" name="skills[]" value="otherSkills">
                 <label for="otherSkills">Other (please specify)</label>
                 <input type="text" id="otherSkillsText" name="otherSkillsText" placeholder="Specify other skills">
             </div>
             
-            <label for="programmingLanguages">List any programming languages you are proficient in:</label>
-            <input type="text" id="programmingLanguages" name="programmingLanguages" placeholder="Python, Java, etc.">
+            <label class="language question" for="programmingLanguages">List any programming languages you are proficient in:</label>
+            <input class="languageType" type="text" id="programmingLanguages" name="programmingLanguages" placeholder="Python, Java, etc.">
         </section>
 
         <!-- Section 5: Career Goals -->
         <section>
             <h2>Career Goals</h2>
             
-            <label>What are your primary career goals in computer science? (check all that apply)</label>
-            <div>
+            <label class="question">What are your primary career goals in computer science? (check all that apply)</label>
+            <div div class="CSSkills">
                 <input type="checkbox" id="softwareDeveloper" name="careerGoals[]" value="softwareDeveloper">
                 <label for="softwareDeveloper">Software Developer/Engineer</label>
             </div>
-            <div>
+            <div div class="CSSkills">
                 <input type="checkbox" id="dataScientist" name="careerGoals[]" value="dataScientist">
                 <label for="dataScientist">Data Scientist</label>
             </div>
-            <div>
+            <div div class="CSSkills">
                 <input type="checkbox" id="webDeveloper" name="careerGoals[]" value="webDeveloper">
                 <label for="webDeveloper">Web Developer</label>
             </div>
-            <div>
+            <div div class="CSSkills">
                 <input type="checkbox" id="mobileAppDeveloper" name="careerGoals[]" value="mobileAppDeveloper">
                 <label for="mobileAppDeveloper">Mobile App Developer</label>
             </div>
-            <div>
+            <div div class="CSSkills">
                 <input type="checkbox" id="databaseAdministrator" name="careerGoals[]" value="databaseAdministrator">
                 <label for="databaseAdministrator">Database Administrator</label>
             </div>
-            <div>
+            <div div class="CSSkills">
                 <input type="checkbox" id="aiMlEngineer" name="careerGoals[]" value="aiMlEngineer">
                 <label for="aiMlEngineer">AI/ML Engineer</label>
             </div>
-            <div>
+            <div div class="CSSkills">
                 <input type="checkbox" id="cybersecurityAnalyst" name="careerGoals[]" value="cybersecurityAnalyst">
                 <label for="cybersecurityAnalyst">Cybersecurity Analyst</label>
             </div>
-            <div>
+            <div div class="CSSkills">
                 <input type="checkbox" id="networkEngineer" name="careerGoals[]" value="networkEngineer">
                 <label for="networkEngineer">Network Engineer</label>
             </div>
-            <div>
+            <div div class="CSSkills">
                 <input type="checkbox" id="cloudArchitect" name="careerGoals[]" value="cloudArchitect">
                 <label for="cloudArchitect">Cloud Architect</label>
             </div>
-            <div>
+            <div div class="CSSkills">
                 <input type="checkbox" id="devOpsEngineer" name="careerGoals[]" value="devOpsEngineer">
                 <label for="devOpsEngineer">DevOps Engineer</label>
             </div>
-            <div>
+            <div div class="CSSkills">
                 <input type="checkbox" id="gameDeveloper" name="careerGoals[]" value="gameDeveloper">
                 <label for="gameDeveloper">Game Developer</label>
             </div>
-            <div>
+            <div div class="CSSkills">
                 <input type="checkbox" id="uxUiDesigner" name="careerGoals[]" value="uxUiDesigner">
                 <label for="uxUiDesigner">UX/UI Designer</label>
             </div>
-            <div>
+            <div div class="CSSkills">
                 <input type="checkbox" id="productManager" name="careerGoals[]" value="productManager">
                 <label for="productManager">Product Manager</label>
             </div>
-            <div>
+            <div div class="CSSkills">
                 <input type="checkbox" id="itProjectManager" name="careerGoals[]" value="itProjectManager">
                 <label for="itProjectManager">IT Project Manager</label>
             </div>
-            <div>
+            <div div class="CSSkills">
                 <input type="checkbox" id="researchScientist" name="careerGoals[]" value="researchScientist">
                 <label for="researchScientist">Research Scientist</label>
             </div>
-            <div>
+            <div div class="CSSkills">
                 <input type="checkbox" id="systemAdministrator" name="careerGoals[]" value="systemAdministrator">
                 <label for="systemAdministrator">System Administrator</label>
             </div>
-            <div>
+            <div div class="CSSkills">
                 <input type="checkbox" id="qaEngineer" name="careerGoals[]" value="qaEngineer">
                 <label for="qaEngineer">Quality Assurance Engineer</label>
             </div>
-            <div>
+            <div div class="CSSkills">
                 <input type="checkbox" id="dataAnalyst" name="careerGoals[]" value="dataAnalyst">
                 <label for="dataAnalyst">Data Analyst</label>
             </div>
-            <div>
+            <div div class="CSSkills">
                 <input type="checkbox" id="entrepreneurFounder" name="careerGoals[]" value="entrepreneurFounder">
                 <label for="entrepreneurFounder">Entrepreneur/Startup Founder</label>
             </div>
-            <div>
+            <div div class="CSSkills">
                 <input type="checkbox" id="otherCareerGoal" name="careerGoals[]" value="otherCareerGoal">
                 <label for="otherCareerGoal">Other (please specify)</label>
                 <input type="text" id="otherCareerGoalText" name="otherCareerGoalText" placeholder="Specify other career goals">
@@ -293,34 +283,34 @@
         <section>
             <h2>Mentorship Preferences</h2>
             
-            <label>What type of mentorship are you interested in receiving? (check all that apply)</label>
-            <div>
+            <label class="question">What type of mentorship are you interested in receiving? (check all that apply)</label>
+            <div class="CSSkills">
                 <input type="checkbox" id="careerGuidance" name="mentorshipPreferences[]" value="careerGuidance">
                 <label for="careerGuidance">Career Guidance</label>
             </div>
-            <div>
+            <div class="CSSkills">
                 <input type="checkbox" id="skillDevelopment" name="mentorshipPreferences[]" value="skillDevelopment">
                 <label for="skillDevelopment">Skill Development</label>
             </div>
-            <div>
+            <div class="CSSkills">
                 <input type="checkbox" id="projectCollaboration" name="mentorshipPreferences[]" value="projectCollaboration">
                 <label for="projectCollaboration">Project Collaboration</label>
             </div>
-            <div>
+            <div class="CSSkills">
                 <input type="checkbox" id="industryInsights" name="mentorshipPreferences[]" value="industryInsights">
                 <label for="industryInsights">Industry Insights</label>
             </div>
-            <div>
+            <div class="CSSkills">
                 <input type="checkbox" id="diversityInclusionSupport" name="mentorshipPreferences[]" value="diversityInclusionSupport">
                 <label for="diversityInclusionSupport">Diversity and Inclusion Support</label>
             </div>
-            <div>
+            <div class="CSSkills">
                 <input type="checkbox" id="otherMentorship" name="mentorshipPreferences[]" value="otherMentorship">
                 <label for="otherMentorship">Other (please specify)</label>
                 <input type="text" id="otherMentorshipText" name="otherMentorshipText" placeholder="Specify other mentorship preferences">
             </div>
             
-            <label>Do you have any preferences for mentors from diverse backgrounds (e.g., gender, ethnicity, experiences)? (Optional)</label>
+            <label class="accessibility question">Do you have any preferences for mentors from diverse backgrounds (e.g., gender, ethnicity, experiences)? (Optional)</label>
             <textarea id="mentorPreferences" name="mentorPreferences" rows="4"></textarea>
         </section>
 
@@ -328,7 +318,7 @@
         <section>
             <h2>Interests and Additional Information</h2>
             
-            <label for="additionalInformation">Tell us more about your interests, hobbies, or any other information you'd like to share:</label>
+            <label class="question" for="additionalInformation">Tell us more about your interests, hobbies, or any other information you'd like to share:</label>
             <textarea id="additionalInformation" name="additionalInformation" rows="6"></textarea>
         </section>
 
@@ -336,7 +326,7 @@
         <section>
             <h2>Feedback and Suggestions</h2>
             
-            <label for="feedbackSuggestions">Do you have any suggestions or feedback on how we can make our platform more inclusive and accommodating to your needs?</label>
+            <label class="question" for="feedbackSuggestions">Do you have any suggestions or feedback on how we can make our platform more inclusive and accommodating to your needs?</label>
             <textarea id="feedbackSuggestions" name="feedbackSuggestions" rows="6"></textarea>
         </section>
 
@@ -344,7 +334,7 @@
         <section>
             <h2>Agreement and Consent</h2>
             
-            <label>
+            <label class="agreement">
                 <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
                 I consent to the terms and conditions of the platform and understand that my information will be used to match me with mentors, resources, and job opportunities.
             </label>
@@ -354,8 +344,8 @@
         <section>
             <h2>Sign-Up</h2>
             
-            <label for="password">Create a Password:</label>
-            <input type="password" id="password" name="password" required>
+            <label class="question" for="password">Create a Password:</label>
+            <input class="languageType" type="password" id="password" name="password" required>
         </section>
 
         <!-- Section 11: Submit -->
