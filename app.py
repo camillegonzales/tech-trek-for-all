@@ -11,12 +11,22 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/home")
 def index():
-    return render_template("index.html")
+    return render_template('index.html')
 
 
 @app.route("/signup")
 def signup():
     return render_template("signup.html")
+
+
+@app.route("/mentee-survey")
+def mentee_signup():
+    return render_template("mentee-survey.html")
+
+
+@app.route("/mentor-survey")
+def mentor_signup():
+    return render_template("mentor-survey.html")
 
 
 @app.route('/success/<name>')

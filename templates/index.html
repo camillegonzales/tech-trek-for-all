@@ -5,8 +5,8 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Tech Trek for All</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='./static/main.css'>
+    <script src='./static/functions.js'></script>
 </head>
 <body class="home-body">
     <header>
@@ -14,8 +14,8 @@
             <div class="logo hiddenNavName">Tech Trek for All</div>
             <div>
                 <ul class="nav-links hiddenNavLinks">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="signup.html">Sign Up</a></li>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
                     <li><a onclick="document.getElementById('modal-login').style.display='block'">Login</a></li>
                 </ul>
             </div>
@@ -45,9 +45,8 @@
                     </strong>
                 </div>
             <br>
-            <a href="signup.html" class="sign-up-button">Sign up today!</a>
+            <a href="{{ url_for('signup') }}" class="sign-up-button">Sign up today!</a>
         </div>
     </section>
-    <script src="functions.js"></script>
 </body>
 </html>
